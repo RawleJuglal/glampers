@@ -6,11 +6,20 @@ import {
   RouterProvider,
   Route
 } from 'react-router-dom'
-import App from './App.jsx'
+import Layout from './components/Layout/Layout'
+import Home from './pages/Home/Home.jsx'
+import Tents from './pages/Tents/Tents'
+import About from './pages/About/About'
+import Login from './pages/Login/Login'
 import './index.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<App />}></Route>
+  <Route path='/' element={<Layout />}>
+    <Route index element={<Home />}/>
+    <Route path='about' element={<About />}/>
+    <Route path='tents' element={<Tents />}/>
+    <Route path="login" element={<Login />}/>
+  </Route>
 ))
 
 ReactDOM.createRoot(document.getElementById('root')).render(

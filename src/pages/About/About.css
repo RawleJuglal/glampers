@@ -1,0 +1,25 @@
+.--about-page-container{
+    background-color:var(--main-bg-color);
+    min-height:83vh;
+}
+
+.--about-jumbotron-container>img{
+    width:100%;
+    object-fit: cover;
+}
+
+.--about-content-container{
+    padding:var(--sixteenPX);
+}
+
+.--about-content-h2{
+    padding-bottom: var(--thirtytwoPX);
+}
+
+.--about-content-p{
+    line-height: 1.375rem;
+}
+
+.--about-btn{
+    background-color: var(--black);
+}

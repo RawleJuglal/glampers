@@ -1,0 +1,9 @@
+.--footer-page-container{
+    margin-top: auto;
+    background-color: var(--slate);
+    height:4.625rem;
+}
+
+.--footer-text{
+    color:#AAA;
+}
