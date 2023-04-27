@@ -48,8 +48,6 @@ table {
 }
 
 .--home-page-container{
-	height:83vh;
-	min-height:max-content;
 	background:url('/src/assets/images/pond-bg\ 1.png');
 	background-size:cover;
 	background-repeat: no-repeat;

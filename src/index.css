@@ -11,6 +11,7 @@
     --main-bg-color:#FFF7ED;
     --black:#161616;
     --white:#FFFDFA;
+    --fivePX:.3125rem;
     --fourteenPX:.875rem;
     --sixteenPX:1rem;
     --eighteenPX:1.125rem;
@@ -18,7 +19,7 @@
     --twentyfourPX:1.5rem;
     --thirtytwoPX:2rem;
     --thirtysixPX:2.25rem;
-    --fourtyeight:3rem;
+    --fourtyeightPX:3rem;
     font-size:16px;
     font-family: var(--primary-font);
     color:var(--black);
@@ -36,9 +37,10 @@
 .XIVpt{font-size:var(--twentyfourPX)}
 .XXXIIpt{font-size:var(--thirtytwoPX)}
 .XXXVIpt{font-size:var(--thirtysixPX)} 
-.XLVIIIpt{font-size:var(--fourtyeight)}
+.XLVIIIpt{font-size:var(--fourtyeightPX)}
 
 /*Font-Weight*/
+.regular{font-weight:400}
 .medium{font-weight:500}
 .semi-bold{font-weight: 600}
 .bold{font-weight:700}
@@ -49,6 +51,11 @@
 .black{color:var(--black)}
 .white{color:var(--white)}
 
+.limit-width{
+    max-width:56.25rem;
+    margin:0 auto;
+}
+.block{display:block;}
 .underline{text-decoration: underline}
 .center{text-align: center}
 
@@ -57,13 +64,14 @@
 .flex-wrap{flex-wrap:wrap}
 .flex-center{justify-content: center}
 .flex-align-center{align-items: center}
+.flex-column{flex-direction: column}
 
 .link{
     text-decoration:none;
     margin-right:var(--fourteenPX)
 }
 
-a.link:hover:not(.active){
+a.link:hover:not(.active):not(.--login-new){
     color:var(--rose-bud);
     text-shadow: 0 2px 3px var(--black);
 }
@@ -82,8 +90,21 @@ a.link:hover:not(.active){
     background-color:var(--carribbean-green);
 }
 
+.block-input{
+    width:100%;
+}
+
+input{
+    border-radius:unset;
+}
+
 #root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.page-container{
+    background-color:var(--main-bg-color);
+    min-height:84vh;
 }

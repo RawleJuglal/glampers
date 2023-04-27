@@ -1,8 +1,3 @@
-.--about-page-container{
-    background-color:var(--main-bg-color);
-    min-height:83vh;
-}
-
 .--about-jumbotron-container>img{
     width:100%;
     object-fit: cover;
@@ -13,13 +8,23 @@
 }
 
 .--about-content-h2{
-    padding-bottom: var(--thirtytwoPX);
+    margin:var(--sixteenPX) 0 var(--thirtytwoPX);
 }
 
 .--about-content-p{
+    margin:var(--sixteenPX) 0;
     line-height: 1.375rem;
+
 }
 
-.--about-btn{
+.--about-cta-container{
+    background-color:var(--rose-bud);
+    padding:var(--twentyfourPX);
+    border-radius:.3125rem;
+}
+
+a.--about-btn{
+    display:inline-block;
     background-color: var(--black);
+    margin-top:var(--sixteenPX);
 }
