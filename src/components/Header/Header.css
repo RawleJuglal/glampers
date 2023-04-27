@@ -1,0 +1,16 @@
+.--header-page-container{
+    background-color:var(--sky-blue);
+}
+
+.--header-logo{
+    flex:2 1 6.25rem;
+    max-width:9.8125rem;
+}
+
+.--header-logo>img{
+    width:100%;
+}
+
+.--header-nav{
+    margin-left:auto;
+}

@@ -1,0 +1,30 @@
+.--about-jumbotron-container>img{
+    width:100%;
+    object-fit: cover;
+}
+
+.--about-content-container{
+    padding:var(--sixteenPX);
+}
+
+.--about-content-h2{
+    margin:var(--sixteenPX) 0 var(--thirtytwoPX);
+}
+
+.--about-content-p{
+    margin:var(--sixteenPX) 0;
+    line-height: 1.375rem;
+
+}
+
+.--about-cta-container{
+    background-color:var(--rose-bud);
+    padding:var(--twentyfourPX);
+    border-radius:.3125rem;
+}
+
+a.--about-btn{
+    display:inline-block;
+    background-color: var(--black);
+    margin-top:var(--sixteenPX);
+}

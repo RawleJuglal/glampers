@@ -1,0 +1,13 @@
+.--notfound-limit-width{
+    padding:var(--sixteenPX);
+}
+
+.--notfound-limit-width>h1{
+    line-height:42px;
+}
+
+.--notfound-btn{
+    width:100%;
+    background-color:var(--black);
+    margin-top:var(--thirtytwoPX);
+}

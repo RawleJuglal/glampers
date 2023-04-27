@@ -1,0 +1,8 @@
+.--tents-filters-container,
+.--tents-products-container{
+    padding:var(--thirtytwoPX) var(--sixteenPX) 0;
+}
+
+.--tents-img{
+    width:100px;
+}
