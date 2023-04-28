@@ -1,8 +1,92 @@
+.--tents-page-container{
+    padding-bottom:var(--thirtytwoPX);
+}
+
 .--tents-filters-container,
 .--tents-products-container{
     padding:var(--thirtytwoPX) var(--sixteenPX) 0;
 }
 
+.--tents-filters-container{
+    align-self:flex-start;
+}
+
+.--tents-filters-title{
+    margin-bottom:var(--twentyPX);
+}
+
+.--tents-filters-container>.--tents-type{
+    margin:0 var(--fivePX);
+}
+
+.--tents-products-container{
+    gap:var(--twentyPX);
+}
+
+.--tents-tile{
+    width:14.125rem;
+}
+
 .--tents-img{
-    width:100px;
+    width:100%;
+    object-fit: cover;
+    height:14.125rem;
+    border-radius:.3125rem;
+}
+
+.--tents-info{
+    color:var(--black);
+    padding:var(--fivePX) 0;
+}
+
+.--tents-price{
+    margin-left:auto;
+    text-align:right;
+    padding-right:.3125rem;
+}
+
+.--tents-type, 
+.--tentDetails-type{
+    font-family:var(--primary-font);
+    display:inline-block;
+    padding:var(--fivePX) var(--fourteenPX);
+    border-radius:var(--fivePX);
+    color:var(--white);
+}
+
+.--tents-safari{
+    background-color:var(--olive-green);
+}
+
+.--tents-dome{
+    background-color:var(--carribbean-green);
+}
+
+.--tents-yurt{
+    background-color:var(--bright-green);
+}
+
+/*TentDetails specific*/
+.--tentDetails-main-container{
+    padding:var(--sixteenPX);
+}
+
+.--tentDetails-img{
+    width:100%;
+    margin:var(--thirtysixPX) 0;  
+    border-radius:.3125rem;
+}
+
+.--tentDetails-info>h3{
+    margin:var(--sixteenPX) 0;
+}
+
+.--tentDetails-description{
+    line-height:var(--twentyPX);
+    margin:var(--twentyfourPX) 0;
+}
+
+.--tentDetails-btn{
+    background-color:var(--olive-green);
+    width:100%;
 }

@@ -7,6 +7,7 @@
     --sky-blue:#96EDFF;
     --rose-bud:#E5C2C0;
     --carribbean-green:#0D5D56;
+    --bright-green:#13AB0B;
     --slate:#46494C;
     --main-bg-color:#FFF7ED;
     --black:#161616;
@@ -34,7 +35,7 @@
 .XVIpt{font-size:var(--sixteenPX)}
 .XVIIIpt{font-size:var(--eighteenPX)}
 .XXpt{font-size:var(--twentyPX)}    
-.XIVpt{font-size:var(--twentyfourPX)}
+.XXIVpt{font-size:var(--twentyfourPX)}
 .XXXIIpt{font-size:var(--thirtytwoPX)}
 .XXXVIpt{font-size:var(--thirtysixPX)} 
 .XLVIIIpt{font-size:var(--fourtyeightPX)}
@@ -57,6 +58,7 @@
 }
 .block{display:block;}
 .underline{text-decoration: underline}
+.no-underline{text-decoration: none}
 .center{text-align: center}
 
 /*Quick Flex Props*/
@@ -66,14 +68,20 @@
 .flex-align-center{align-items: center}
 .flex-column{flex-direction: column}
 
+.nav-link, 
 .link{
     text-decoration:none;
     margin-right:var(--fourteenPX)
 }
 
-a.link:hover:not(.active):not(.--login-new){
+a.nav-link:hover:not(.active):not(.--login-new){
     color:var(--rose-bud);
     text-shadow: 0 2px 3px var(--black);
+}
+
+a.link:hover{
+    color:var(--bright-green);
+    text-shadow:0 2px 3px var(--white);
 }
 
 .btn{
@@ -107,4 +115,12 @@ input{
 .page-container{
     background-color:var(--main-bg-color);
     min-height:84vh;
+}
+
+.back-button{
+    color:#201F1D;
+}
+
+.clear-filters{
+    background-color:var(--black);
 }

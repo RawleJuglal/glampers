@@ -29,3 +29,12 @@ export async function getTents(){
 
     return dataArr
 }
+
+export async function getTent(id){
+  const docRef = doc(db, 'tents', id)
+  const tentSnapShot = await getDoc(docRef)
+  return {
+    ...tentSnapShot.data(),
+    id:tentSnapShot.id
+  }
+}
