@@ -15,16 +15,16 @@ export default function Header(){
         <div className='--header-page-container flex flex-wrap flex-align-center'>
             <Link className='--header-logo' to='/'><img src={LogoImg} alt="Happy Glampers Logo" /></Link>
             <nav className='--header-nav bold'>
-                <NavLink className='link black' style={({isActive}) => isActive ? activeStyles : null} to="host">
+                <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to="host">
                     Host
                 </NavLink>
-                <NavLink className='link black' style={({isActive}) => isActive ? activeStyles : null} to="about">
+                <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to="about">
                     About
                 </NavLink>
-                <NavLink className='link black' style={({isActive}) => isActive ? activeStyles : null} to='tents'>
+                <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to='tents'>
                     Tents
                 </NavLink>
-                <NavLink className='link black' style={({isActive}) => isActive ? activeStyles : null} to='login'>
+                <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to='login'>
                     <BsPersonCircle />
                 </NavLink>
             </nav>
