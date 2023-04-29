@@ -7,8 +7,17 @@ import {
   Route
 } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
+import HostLayout from './components/HostLayout/HostLayout'
 import Error from './components/Error/Error'
 import Home from './pages/Home/Home.jsx'
+import Dashboard from './pages/Host/Dashboard/Dashboard'
+import Income from './pages/Host/Income/Income'
+import Reviews from './pages/Host/Reviews/Reviews'
+import HostTents from './pages/Host/HostTents/HostTents'
+import HostTentDetails from './pages/Host/HostTents/HostTentDetails'
+import TentInfo from './pages/Host/TentInfo/TentInfo'
+import Pricing from './pages/Host/Pricing/Pricing'
+import Photos from './pages/Host/Photos/Photos'
 import { Tents, loader as tentsLoader } from './pages/Tents/Tents'
 import { TentDetails, loader as tentLoader } from './pages/Tents/TentDetails'
 import About from './pages/About/About'
@@ -22,6 +31,17 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='about' element={<About />}/>
     <Route path='tents/:id' element={<TentDetails />} loader={({params})=> tentLoader(params)}/>
     <Route path='tents' element={<Tents />} loader={tentsLoader}/>
+    <Route path="host" element={<HostLayout />}>
+      <Route index element={<Dashboard />}/>
+      <Route path='income' element={<Income />}/>
+      <Route path='reviews' element={<Reviews />}/>
+      <Route path='tents' element={<HostTents />}/>
+      <Route path='tents/:id' element={<HostTentDetails />}>
+        <Route index element={<TentInfo />}/>
+        <Route path="pricing" element={<Pricing />}/>
+        <Route path="photos" element={<Photos />}/>
+      </Route>
+    </Route>
     <Route path="login" element={<Login />}/>
     <Route path="*" element={<NotFound />}/>
   </Route>
