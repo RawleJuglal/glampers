@@ -1,0 +1,7 @@
+.--dashboard-welcome-container{
+    background-color:#FFEAD0;
+}
+
+.--dashboard-income-text-container{
+    gap:var(--fivePX);
+}

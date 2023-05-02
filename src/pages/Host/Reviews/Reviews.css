@@ -1,0 +1,28 @@
+.--reviews-page-container{
+    padding:0 var(--sixteenPX) var(--fourtyeightPX); 
+}
+
+.--reviews-top-text{
+    gap:var(--twentyPX);
+    margin:var(--twentyPX) 0;
+}
+
+.--reviews-graph{
+    width:100%;
+    margin-bottom:var(--twentyfourPX);
+}
+
+.review-star{
+    color:var(--olive-green);
+    margin:var(--twentyPX) 0;
+}
+
+.--reviews-info{
+    gap:var(--fivePX);
+    margin-bottom:var(--fourteenPX);
+}
+
+.--reviews-testimony{
+    line-height:1.375rem;
+    margin-bottom:var(--twentyfourPX);
+}

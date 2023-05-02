@@ -1,0 +1,23 @@
+.--hostTents-page-container{
+    padding:0 1rem;
+}
+
+.--hostTents-title{
+    margin-bottom:var(--fourteenPX);
+}
+
+.--hostTents-tent-container{
+    gap:var(--twentyPX);
+    background-color:var(--white);
+    padding:1rem;
+}
+
+.--hostTents-img{
+    width:4.125rem;
+    height:4.125rem;
+    border-radius:var(--fivePX);
+}
+
+.--hostTents-name{
+    margin:var(--fivePX) 0;
+}

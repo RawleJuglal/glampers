@@ -12,6 +12,7 @@
     --main-bg-color:#FFF7ED;
     --black:#161616;
     --white:#FFFDFA;
+    --grey:#4D4D4D;
     --fivePX:.3125rem;
     --fourteenPX:.875rem;
     --sixteenPX:1rem;
@@ -51,6 +52,7 @@
 /*Color*/
 .black{color:var(--black)}
 .white{color:var(--white)}
+.grey{color:var(--grey)}
 
 .limit-width{
     max-width:56.25rem;
@@ -60,6 +62,8 @@
 .underline{text-decoration: underline}
 .no-underline{text-decoration: none}
 .center{text-align: center}
+.push-right{margin-left:auto}
+.push-left{margin-right:auto}
 
 /*Quick Flex Props*/
 .flex{display:flex;}
