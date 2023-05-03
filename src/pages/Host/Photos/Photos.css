@@ -1,0 +1,10 @@
+.--photos-page-container{
+    background-color:var(--white);
+}
+
+.--photos-img{
+    width:10.25rem;
+    height:8.25rem;
+    border-radius:.3125rem;
+    padding:0 var(--thirtytwoPX) var(--thirtytwoPX);
+}

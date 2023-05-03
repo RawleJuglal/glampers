@@ -6,7 +6,7 @@
     margin-bottom:var(--fourteenPX);
 }
 
-.--hostTents-tent-container{
+/* .--hostTents-tent-container{
     gap:var(--twentyPX);
     background-color:var(--white);
     padding:1rem;
@@ -20,4 +20,4 @@
 
 .--hostTents-name{
     margin:var(--fivePX) 0;
-}
+} */

@@ -1,0 +1,25 @@
+.--hostTentDetails-info-container{
+    gap:var(--twentyPX);
+    background-color:var(--white);
+    padding:var(--thirtytwoPX);
+    margin-top:var(--thirtytwoPX);
+}
+
+.--hostTentDetails-img{
+    width:10rem;
+    height:10rem;
+    border-radius:.3125rem;
+}
+
+.--hostTentDetails-type{
+    margin:var(--twentyPX) 0;
+}
+
+.--hostTentDetails-name{
+    margin-bottom:var(--sixteenPX);
+}
+
+.--hostTentDetails-nav{
+    background-color:var(--white);
+    padding:0 var(--thirtytwoPX) var(--sixteenPX);
+}

@@ -22,10 +22,10 @@ export function HostTents(){
                                 className='link'
                                 to={tent.id}
                             >
-                                <div key={tent.id} className='--hostTents-tent-container flex flex-align-center'>
-                                    <img className='--hostTents-img' src={tent.imageUrl} alt={`image of ${tent.type} tent`} />
+                                <div key={tent.id} className='tent-container flex flex-align-center'>
+                                    <img className='host-img' src={tent.imageUrl} alt={`image of ${tent.type} tent`} />
                                     <div className='--hostTents-text-container'>
-                                        <h2 className='--hostTents-name XXpt semi-bold black'>{tent.name}</h2>
+                                        <h2 className='host-name XXpt semi-bold black'>{tent.name}</h2>
                                         <p className='--hostTents-price grey medium'>${tent.price}<span>/day</span></p>
                                     </div>
                                 </div>

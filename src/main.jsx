@@ -14,7 +14,7 @@ import {Dashboard, loader as dashboardLoader} from './pages/Host/Dashboard/Dashb
 import Income from './pages/Host/Income/Income'
 import Reviews from './pages/Host/Reviews/Reviews'
 import {HostTents, loader as hostTentsLoader} from './pages/Host/HostTents/HostTents'
-import HostTentDetails from './pages/Host/HostTents/HostTentDetails'
+import {HostTentDetails, loader as hostTentDetailsLoader} from './pages/Host/HostTents/HostTentDetails'
 import TentInfo from './pages/Host/TentInfo/TentInfo'
 import Pricing from './pages/Host/Pricing/Pricing'
 import Photos from './pages/Host/Photos/Photos'
@@ -36,7 +36,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path='income' element={<Income />}/>
       <Route path='reviews' element={<Reviews />}/>
       <Route path='tents' element={<HostTents />} loader={hostTentsLoader}/>
-      <Route path='tents/:id' element={<HostTentDetails />}>
+      <Route path='tents/:id' element={<HostTentDetails />} loader={hostTentDetailsLoader}>
         <Route index element={<TentInfo />}/>
         <Route path="pricing" element={<Pricing />}/>
         <Route path="photos" element={<Photos />}/>

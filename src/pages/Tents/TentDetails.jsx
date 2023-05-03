@@ -21,10 +21,10 @@ export function TentDetails(){
                     {tent => {
                         return(
                             <div className='--tentDetails-main-container limit-width'>
-                            <Link to={`..${search}`} relative='path' className='back-button link'>&larr; <span>Back to {type} vans</span></Link>
+                            <Link to={`..${search}`} relative='path' className='back-button link'>&larr; <span>Back to {type} tents</span></Link>
 
                                 <img className='--tentDetails-img' src={tent.imageUrl} alt={`image of ${tent.type} tent`} />
-                                <i className={`--tentDetails-type --tents-${tent.type} ${tent.type} selected`}>{tent.type}</i>
+                                <i className={`type-of-tent --tents-${tent.type} ${tent.type} selected`}>{tent.type}</i>
                                 <div className="--tentDetails-info XXpt">
                                     <h3 className='bold'>{tent.name}</h3>
                                     <p className='--tentDetails-price'>${tent.price}<span className='XIVpt'>/day</span></p>

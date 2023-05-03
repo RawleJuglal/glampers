@@ -19,6 +19,7 @@
     --eighteenPX:1.125rem;
     --twentyPX:1.25rem;
     --twentyfourPX:1.5rem;
+    --twentysixPX:1.625rem;
     --thirtytwoPX:2rem;
     --thirtysixPX:2.25rem;
     --fourtyeightPX:3rem;
@@ -37,6 +38,7 @@
 .XVIIIpt{font-size:var(--eighteenPX)}
 .XXpt{font-size:var(--twentyPX)}    
 .XXIVpt{font-size:var(--twentyfourPX)}
+.XXVIpt{font-size:var(--twentysixPX)}
 .XXXIIpt{font-size:var(--thirtytwoPX)}
 .XXXVIpt{font-size:var(--thirtysixPX)} 
 .XLVIIIpt{font-size:var(--fourtyeightPX)}
@@ -127,4 +129,30 @@ input{
 
 .clear-filters{
     background-color:var(--black);
+}
+
+.tent-container{
+    gap:var(--twentyPX);
+    background-color:var(--white);
+    padding:1rem;
+}
+
+.host-img{
+    width:4.125rem;
+    height:4.125rem;
+    border-radius:var(--fivePX);
+}
+
+.host-name{
+    margin:var(--fivePX) 0;
+}
+
+.type-of-tent{
+    font-family:var(--primary-font);
+    display:inline-block;
+    padding:var(--fivePX) var(--fourteenPX);
+    border-radius:var(--fivePX);
+    color:var(--white);
+    border:none;
+    margin-right:var(--fivePX);
 }

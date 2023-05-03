@@ -1,0 +1,8 @@
+.pricing-page-container{
+    background-color:var(--white);
+    padding:0 var(--thirtytwoPX) var(--thirtytwoPX);
+}
+
+.pricing-page-container>h4{
+    padding:var(--thirtytwoPX) 0;
+}

@@ -1,0 +1,9 @@
+.--tentInfo-page-container{    
+    background-color:var(--white);
+    padding:0 var(--thirtytwoPX) var(--thirtytwoPX);
+}
+
+.--tentInfo-page-container>h4{
+    line-height:1.34375rem;
+    padding:var(--fivePX) 0;
+}
