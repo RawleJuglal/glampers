@@ -45,15 +45,6 @@
     padding-right:.3125rem;
 }
 
-.--tents-type, 
-.--tentDetails-type{
-    font-family:var(--primary-font);
-    display:inline-block;
-    padding:var(--fivePX) var(--fourteenPX);
-    border-radius:var(--fivePX);
-    color:var(--white);
-}
-
 .--tents-safari{
     background-color:var(--olive-green);
 }

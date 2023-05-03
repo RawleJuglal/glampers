@@ -1,0 +1,23 @@
+.--income-page-container{
+    padding:0 var(--sixteenPX);
+}
+
+.--income-title,
+.--income-total{
+    margin:var(--twentyPX) 0;
+}
+
+.--income-graph{
+    width:100%;
+}
+
+.--income-summary{
+    margin:var(--sixteenPX) 0;
+}
+
+
+.--income-transaction{
+    background-color:var(--white);
+    padding:var(--sixteenPX);
+    margin:var(--sixteenPX) 0;
+}

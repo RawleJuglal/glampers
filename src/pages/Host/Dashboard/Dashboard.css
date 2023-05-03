@@ -1,0 +1,32 @@
+.--dashboard-welcome-container{
+    background-color:#FFEAD0;
+    padding:var(--twentyfourPX) var(--twentyfourPX);
+}
+
+.--dashboard-income-text-container{
+    gap:var(--fivePX);
+}
+
+.--dashboard-welcome-last-p{
+    margin:var(--sixteenPX) 0;
+}
+
+.--dashboard-review-container{
+    background-color:#FFDDB2;
+    gap:var(--fivePX);
+    padding:var(--twentyfourPX) var(--twentyfourPX);
+}
+
+.--dashboard-review-star{
+    color:var(--olive-green);
+}
+
+.--dashboard-host-tents{
+    padding:var(--twentyPX) var(--twentyPX);
+}
+
+@media (min-width:750px) {
+    .--dashboard-host-tents{
+        padding:var(--twentyPX) 0;
+    }
+}

@@ -19,6 +19,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
 const tentsCollectionRef = collection(db, "tents")
+const userCollectionRef = collection(db, 'user')
 
 export async function getTents(){
     const querySnapshot = await getDocs(tentsCollectionRef)
@@ -37,4 +38,20 @@ export async function getTent(id){
     ...tentSnapShot.data(),
     id:tentSnapShot.id
   }
+}
+
+export async function loginUser(creds){
+  const querySnapshot = await getDocs(userCollectionRef)
+  const dataArr = querySnapshot.docs.map(doc =>({
+    ...doc.data(),
+    id:doc.id
+  }))
+
+  const matched = dataArr.find(item => item.email === creds.email && item.password === creds.password)
+  if(matched === undefined){
+    throw {
+        message: 'email or password did not match',
+    }
+  }
+  return matched
 }

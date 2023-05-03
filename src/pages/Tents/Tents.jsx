@@ -39,9 +39,9 @@ export function Tents(){
                                     <img className='--tents-img' src={tent.imageUrl} />
                                     <div className="--tents-info XXpt flex">
                                         <h3 className='bold'>{tent.name}</h3>
-                                        <p className='--tents-price'>${tent.price}<span className='XIVpt block'>/day</span></p>
+                                        <p className='--tents-price price'>${tent.price}<span className='XIVpt block'>/day</span></p>
                                     </div>
-                                    <i className={`--tents-type --tents-${tent.type} ${tent.type} selected`}>{tent.type}</i>
+                                    <i className={`type-of-tent --tents-${tent.type} ${tent.type} selected`}>{tent.type}</i>
                                 </Link>
                             </div>
                         ))
@@ -52,25 +52,25 @@ export function Tents(){
                                 <button
                                 onClick={() => handleFilterChange("type", "safari")}
                                 className={
-                                    `--tents-type --tents-safari ${typeFilter === "safari" ? "selected" : ""}`
+                                    `type-of-tent --tents-safari ${typeFilter === "safari" ? "selected" : ""}`
                                 }
                             >Safari</button>
                             <button
                                 onClick={() => handleFilterChange("type", "yurt")}
                                 className={
-                                    `--tents-type --tents-yurt ${typeFilter === "yurt" ? "selected" : ""}`
+                                    `type-of-tent --tents-yurt ${typeFilter === "yurt" ? "selected" : ""}`
                                 }
                             >Yurt</button>
                             <button
                                 onClick={() => handleFilterChange("type", "dome")}
                                 className={
-                                    `--tents-type --tents-dome ${typeFilter === "dome" ? "selected" : ""}`
+                                    `type-of-tent --tents-dome ${typeFilter === "dome" ? "selected" : ""}`
                                 }
                             >Rugged</button>
                             {typeFilter ? (
                                 <button
                                     onClick={() => handleFilterChange("type", null)}
-                                    className="--tents-type clear-filters"
+                                    className="type-of-tent clear-filters"
                                 >Clear filter</button>
                             ) : null}
                             </div>
