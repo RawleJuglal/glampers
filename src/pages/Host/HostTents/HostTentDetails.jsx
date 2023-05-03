@@ -1,9 +1,11 @@
 import React from 'react'
 import { Outlet, defer, Await, useLoaderData, useLocation, Link, NavLink } from 'react-router-dom'
+import { requireAuth } from '../../../hooks/utils'
 import { getTent } from '../../../hooks/api'
 import './HostTentDetail.css'
 
-export function loader({params, request}){
+export async function loader({params, request}){
+    await requireAuth(request)
     return defer({tent: getTent(params.id)})
 }
 

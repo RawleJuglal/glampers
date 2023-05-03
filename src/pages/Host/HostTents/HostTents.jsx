@@ -1,9 +1,11 @@
 import React from 'react'
+import { requireAuth } from '../../../hooks/utils'
 import { getTents } from '../../../hooks/api'
 import { useLoaderData, defer, Await, Link } from 'react-router-dom'
 import './HostTents.css'
 
-export function loader({request}){
+export async function loader({request}){
+    await requireAuth(request)
     return defer({tents: getTents()})
 }
 

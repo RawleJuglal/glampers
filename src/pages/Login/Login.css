@@ -6,6 +6,10 @@
     margin:var(--thirtytwoPX) 0;
 }
 
+.--login-error-message{
+    margin:var(--thirtytwoPX) 0;
+}
+
 .--login-form>input{
     font-family:var(--primary-900);
     border:1px solid #AAA;

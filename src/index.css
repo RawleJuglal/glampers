@@ -8,6 +8,7 @@
     --rose-bud:#E5C2C0;
     --carribbean-green:#0D5D56;
     --bright-green:#13AB0B;
+    --red:#FF0000;
     --slate:#46494C;
     --main-bg-color:#FFF7ED;
     --black:#161616;
@@ -55,6 +56,7 @@
 .black{color:var(--black)}
 .white{color:var(--white)}
 .grey{color:var(--grey)}
+.red{color:var(--red)}
 
 .limit-width{
     max-width:56.25rem;

@@ -1,10 +1,12 @@
 import React from 'react'
 import { useLoaderData, defer, Await, Link } from 'react-router-dom'
+import { requireAuth } from '../../../hooks/utils'
 import { getTents } from '../../../hooks/api'
 import { BsStarFill } from "react-icons/bs"
 import './Dashboard.css'
 
-export function loader({request}){
+export async function loader({request}){
+    await requireAuth(request)
     return defer({tents: getTents()})
 }
 
@@ -42,7 +44,7 @@ export function Dashboard(){
                                         <h2 className='host-name XXpt semi-bold black'>{tent.name}</h2>
                                         <p className='--dashboard-price grey medium'>${tent.price}<span>/day</span></p>
                                     </div>
-                                    <Link to={`tents/${tent.id}`} className='push-right link black'>Edit</Link>
+                                    <p className='push-right link black'>Edit</p>
                                 </div>
                             </Link>
                         ))

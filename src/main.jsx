@@ -21,8 +21,9 @@ import Photos from './pages/Host/Photos/Photos'
 import { Tents, loader as tentsLoader } from './pages/Tents/Tents'
 import { TentDetails, loader as tentLoader } from './pages/Tents/TentDetails'
 import About from './pages/About/About'
-import Login from './pages/Login/Login'
+import { Login , loader as loginLoader, action as actionLoader} from './pages/Login/Login'
 import NotFound from './pages/NotFound/NotFound'
+import { requireAuth } from './hooks/utils'
 import './index.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -33,16 +34,31 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='tents' element={<Tents />} loader={tentsLoader}/>
     <Route path="host" element={<HostLayout />}>
       <Route index element={<Dashboard />} loader={dashboardLoader}/>
-      <Route path='income' element={<Income />}/>
-      <Route path='reviews' element={<Reviews />}/>
+      <Route path='income' element={<Income />} loader={async({request})=>{
+        await requireAuth(request)
+        return null
+      }}/>
+      <Route path='reviews' element={<Reviews />} loader={async({request})=>{
+        await requireAuth(request)
+        return null
+      }}/>
       <Route path='tents' element={<HostTents />} loader={hostTentsLoader}/>
       <Route path='tents/:id' element={<HostTentDetails />} loader={hostTentDetailsLoader}>
-        <Route index element={<TentInfo />}/>
-        <Route path="pricing" element={<Pricing />}/>
-        <Route path="photos" element={<Photos />}/>
+        <Route index element={<TentInfo />} loader={async({request})=>{
+        await requireAuth(request)
+        return null
+      }}/>
+        <Route path="pricing" element={<Pricing />} loader={async({request})=>{
+        await requireAuth(request)
+        return null
+      }}/>
+        <Route path="photos" element={<Photos />} loader={async({request})=>{
+        await requireAuth(request)
+        return null
+      }}/>
       </Route>
     </Route>
-    <Route path="login" element={<Login />}/>
+    <Route path="login" element={<Login />} loader={loginLoader} action={actionLoader}/>
     <Route path="*" element={<NotFound />}/>
   </Route>
 ))

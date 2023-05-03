@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import LogoImg from '../../assets/images/logo.png'
-import { BsPersonCircle } from 'react-icons/bs'
+import { BsPersonCircle, BsDoorClosedFill } from 'react-icons/bs'
 import './Header.css'
 
 
@@ -9,6 +9,10 @@ export default function Header(){
     const activeStyles = {
         textDecoration:'underline',
         color:'#161616'
+    }
+
+    function logout(){
+        localStorage.clear()
     }
 
     return(
@@ -27,6 +31,8 @@ export default function Header(){
                 <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to='login'>
                     <BsPersonCircle />
                 </NavLink>
+                <a  className='nav-link black' onClick={logout}><BsDoorClosedFill/></a>
+                
             </nav>
         </div>
     )
