@@ -15,7 +15,7 @@ export default function Header(){
     const [user, setUser] = useLocalStorage('loggedin', null)
 
     function logout(){
-        localStorage.clear()
+        setUser(null)
     }
 
     return(
