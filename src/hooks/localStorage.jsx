@@ -1,22 +1,55 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
+import { subscribeToEvent, unsubscribeToEvent } from './customEvent'
 
-export function useLocalStorage(key) {
-  const [value, setValue] = useState(localStorage.getItem(key));
+export function useLocalStorage(key, defaultValue) {
+  const prevKeyRef = useRef(key)
+  const [value, setValue] = useState(() => {
+    const storedValue = localStorage.getItem(key)
+    
+    if (storedValue === null) {
+      return defaultValue
+    }
+
+    try {
+      const parsedValue = JSON.parse(storedValue)
+      return parsedValue
+    } catch {
+      return defaultValue
+    }
+  });
 
   useEffect(() => {
-    const handleStorage = (event) => {
-      if (event.storageArea === localStorage && event.key === key) {
-        console.log('we had a change')
-        setValue(event.newValue);
-      }
-    };
+    const currentKey = prevKeyRef.current
 
-    window.addEventListener('storage', handleStorage);
+    if (currentKey !== key) {
+      localStorage.removeItem(currentKey)
+    }
+    
+    prevKeyRef.current = key
+    
+    localStorage.setItem(key, JSON.stringify(value))
+  }, [key, prevKeyRef, value])
+
+  useEffect(() => {
+    const handleEvent = (event) => {
+      const key = event.key || event.detail.key
+      const newValue = event.newValue || event.detail.newValue
+
+      if (key === prevKeyRef.current) {
+        setValue(JSON.parse(newValue));
+      }
+    }; 
+
+    subscribeToEvent('login', handleEvent)
+    window.addEventListener('storage', handleEvent);
 
     return () => {
-      window.removeEventListener('storage', handleStorage);
+      unsubscribeToEvent('login', handleEvent);
+      window.removeEventListener('storage', handleEvent);
     };
-  }, [key]);
+  }, [prevKeyRef]);
 
-  return value;
+  const tuple = useMemo(() => [value, setValue], [value]);
+
+  return tuple
 }

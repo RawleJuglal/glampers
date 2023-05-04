@@ -12,7 +12,7 @@ export default function Header(){
         color:'#161616'
     }
 
-    const user = useLocalStorage('loggedin')
+    const [user, setUser] = useLocalStorage('loggedin', null)
 
     function logout(){
         localStorage.clear()
