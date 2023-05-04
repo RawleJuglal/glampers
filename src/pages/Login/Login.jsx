@@ -1,6 +1,7 @@
 import React from 'react'
-import { Form, useLoaderData, redirect, useActionData, useNavigation } from 'react-router-dom'
+import { Form, useLoaderData, redirect, useActionData, useNavigation } from 'react-router-dom' 
 import { loginUser } from '../../hooks/api'
+import { publishEvent } from '../../hooks/customEvent'
 import './Login.css'
 
 export function loader({request}){
@@ -14,7 +15,11 @@ export async function action({request}){
     const pathname = new URL(request.url).searchParams.get('redirectTo') || '/host'
     try{
         const data = await loginUser({ email, password})
-        localStorage.setItem('loggedin', true)
+        
+        const key = 'loggedin'
+        const newValue = JSON.stringify(true)
+        localStorage.setItem(key, newValue)
+        publishEvent("login", { key, newValue });
         return redirect(pathname)
     } catch(err){
         return err.message
@@ -26,7 +31,7 @@ export function Login(){
     const errorMessage = useActionData()
     const navigation = useNavigation()
     return(
-       <div className='--login-page-container page-container flex flex-center flex-column'>
+        <div className='--login-page-container page-container flex flex-center flex-column'>
             <div className='--login-limit-width limit-width'>
                 <h1 className='XXXIIpt bold center'>Sign in to your account</h1>
                 {message && <h2 className="--login-error-message red XXpt bold">{message}</h2>}
@@ -37,8 +42,7 @@ export function Login(){
                     <button className='--login-btn btn ' disabled={navigation.state === 'submitting'}>{navigation.state === 'submitting' ? 'Logging in...' : 'Sign in'}</button>
                 </Form>
                 <p className='bold'>Don't have an account? <a className='--login-new link regular' href="#">Create one now</a></p>
-            </div>
-            
-       </div>
+            </div>  
+        </div>
     )
 }
