@@ -6,6 +6,7 @@ import {
   RouterProvider,
   Route
 } from 'react-router-dom'
+import { UserContextProvider } from './hooks/userContext'
 import Layout from './components/Layout/Layout'
 import HostLayout from './components/HostLayout/HostLayout'
 import Error from './components/Error/Error'
@@ -65,6 +66,8 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>  
   </React.StrictMode>
 )
