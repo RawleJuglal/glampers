@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form, useLoaderData, redirect, useActionData, useNavigation } from 'react-router-dom' 
 import { loginUser } from '../../hooks/api'
+import { publishEvent } from '../../hooks/customEvent'
 import './Login.css'
 
 export function loader({request}){
@@ -14,8 +15,11 @@ export async function action({request}){
     const pathname = new URL(request.url).searchParams.get('redirectTo') || '/host'
     try{
         const data = await loginUser({ email, password})
-        localStorage.setItem('loggedin', true)
         
+        const key = 'loggedin'
+        const newValue = JSON.stringify(true)
+        localStorage.setItem(key, newValue)
+        publishEvent("login", { key, newValue });
         return redirect(pathname)
     } catch(err){
         return err.message
