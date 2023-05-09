@@ -20,7 +20,7 @@ export default function Header(){
 
     return(
         <div className='--header-page-container flex flex-wrap flex-align-center'>
-                    <Link className='--header-logo' to='/'><img src={LogoImg} alt="Happy Glampers Logo" /></Link>
+                    <Link className='--header-logo' to='/glampers'><img src={LogoImg} alt="Happy Glampers Logo" /></Link>
                     <nav className='--header-nav bold'>
                         <NavLink className='nav-link black' style={({isActive}) => isActive ? activeStyles : null} to="host">
                             Host

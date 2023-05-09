@@ -12,7 +12,7 @@ export async function action({request}){
     const formData = await request.formData()
     const email = formData.get('email')
     const password = formData.get('password')
-    const pathname = new URL(request.url).searchParams.get('redirectTo') || '/host'
+    const pathname = new URL(request.url).searchParams.get('redirectTo') || '/glampers/host'
     try{
         const data = await loginUser({ email, password})
         

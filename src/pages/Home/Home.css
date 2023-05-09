@@ -48,7 +48,7 @@ table {
 }
 
 .--home-page-container{
-	background:url('/src/assets/images/pond-bg\ 1.png');
+	background:url('./pond-bg\ 1.png');
 	background-size:cover;
 	background-repeat: no-repeat;
 }

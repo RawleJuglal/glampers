@@ -27,7 +27,7 @@ import { requireAuth } from './hooks/utils'
 import './index.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={<Layout />} errorElement={<Error />}>
+  <Route path='/glampers' element={<Layout />} errorElement={<Error />}>
     <Route index element={<Home />}/>
     <Route path='about' element={<About />}/>
     <Route path='tents/:id' element={<TentDetails />} loader={({params})=> tentLoader(params)}/>
