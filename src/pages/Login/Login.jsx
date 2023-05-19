@@ -37,6 +37,7 @@ export function Login(){
                 {message && <h2 className="--login-error-message red XXpt bold">{message}</h2>}
                 {errorMessage && <h2 className="--login-error-message red XXpt bold">{errorMessage}</h2>}
                 <Form className='--login-form flex flex-center flex-align-center flex-column' method="post" replace>
+                    <label htmlFor="email" className='--login-label'>To test use: r@r.com and reactjs</label>
                     <input className='--login-email block-input' name="email" type="email" placeholder="Email" />
                     <input className='--login-password block-input' name="password" type="password" placeholder="Password"/>
                     <button className='--login-btn btn ' disabled={navigation.state === 'submitting'}>{navigation.state === 'submitting' ? 'Logging in...' : 'Sign in'}</button>

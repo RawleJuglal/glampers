@@ -6,6 +6,10 @@
     margin:var(--thirtytwoPX) 0;
 }
 
+.--login-label{
+    margin:var(--fivePX) 0;
+}
+
 .--login-error-message{
     margin:var(--thirtytwoPX) 0;
 }
